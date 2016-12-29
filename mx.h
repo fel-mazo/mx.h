@@ -6,7 +6,7 @@
 /*   By: fel-mazo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/26 22:00:55 by fel-mazo          #+#    #+#             */
-/*   Updated: 2016/12/29 18:43:21 by fel-mazo         ###   ########.fr       */
+/*   Updated: 2016/12/30 00:56:40 by fel-mazo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 # include <stdlib.h>
 # include <math.h>
+
+/*
+** Path to libft
+*/
+
 # include "lib_subset/libft.h"
 
 typedef struct		s_mxint
