@@ -6,7 +6,7 @@
 /*   By: fel-mazo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/26 22:19:35 by fel-mazo          #+#    #+#             */
-/*   Updated: 2016/12/27 20:09:00 by fel-mazo         ###   ########.fr       */
+/*   Updated: 2016/12/29 15:28:16 by fel-mazo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_mxint		*new_matrix(size_t rows, size_t cols)
 	return (ret);
 }
 
-t_vint		*new_vector(int *list, size_t len)
+t_vint		*new_vector(int val, size_t len)
 {
 	t_vint	*ret;
 
@@ -37,9 +37,8 @@ t_vint		*new_vector(int *list, size_t len)
 		return (NULL);
 	ret->len = len;
 	ret->data = (int *)ft_memalloc(sizeof(int) * len);
-	if (list)
-		while (len--)
-			ret->data[len] = list[len];
+	while (len--)
+		ret->data[len] = val;
 	return (ret);
 }
 

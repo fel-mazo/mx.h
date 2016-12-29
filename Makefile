@@ -6,14 +6,14 @@
 #    By: fel-mazo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 13:42:55 by fel-mazo          #+#    #+#              #
-#    Updated: 2016/12/27 20:12:33 by fel-mazo         ###   ########.fr        #
+#    Updated: 2016/12/29 18:27:06 by fel-mazo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		= gcc
 NAME	= testmatrix
 CFLAGS	= -Wall -Wextra -Werror
-SRC		= creation.c util.c main.c
+SRC		= creation.c util.c main.c ops.c
 LIB		= ./lib_subset
 
 OBJ		= $(SRC:.c=.o)

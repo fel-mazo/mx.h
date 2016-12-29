@@ -6,7 +6,7 @@
 /*   By: fel-mazo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/27 10:35:24 by fel-mazo          #+#    #+#             */
-/*   Updated: 2016/12/27 20:09:48 by fel-mazo         ###   ########.fr       */
+/*   Updated: 2016/12/29 15:19:13 by fel-mazo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void		free_matrix(t_mxint	**m)
 	*m = NULL;
 }
 
-void		print_vect(t_vint *v)
+void		print_vector(t_vint *v)
 {
 	size_t	i;
 
@@ -58,8 +58,9 @@ void		print_vect(t_vint *v)
 		ft_putchar(' ');
 		ft_putnbr(v->data[i]);
 		ft_putchar(',');
+		++i;
 	}
-	ft_putchar(')');
+	ft_putstr(")\n");
 }
 
 void		free_vect(t_vint **v)

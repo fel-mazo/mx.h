@@ -6,7 +6,7 @@
 /*   By: fel-mazo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/26 22:00:55 by fel-mazo          #+#    #+#             */
-/*   Updated: 2016/12/27 20:10:14 by fel-mazo         ###   ########.fr       */
+/*   Updated: 2016/12/29 18:26:49 by fel-mazo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ t_mxint		*new_matrix(size_t rows, size_t cols);
 /*
  * makes a vector and populates it
 */
-t_vint		*new_vector(int *list, size_t len);
+t_vint		*new_vector(int val, size_t len);
 
 /*
  * makes an identity matrix of size n
@@ -55,6 +55,8 @@ t_mxint		*t(t_mxint *m);
 */
 void		print_matrix(t_mxint *m);
 
+void		print_vector(t_vint *v);
+
 /*
  * frees a matrix
 */
@@ -69,6 +71,14 @@ void		free_vector(t_vint **v);
  * makes a diagonal matrix
 */
 t_mxint		*diag(t_vint *v);
+
+t_mxint		*add_matrix(t_mxint *to, t_mxint *from);
+
+t_mxint		*add_scal(t_mxint *a, int x);
+
+t_mxint		*scale_matrix(t_mxint *a, int x);
+
+t_mxint		*matrix_multi(t_mxint *a, t_mxint *b);
 
 
 #endif
