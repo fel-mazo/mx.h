@@ -5,16 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fel-mazo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/11/05 13:42:55 by fel-mazo          #+#    #+#              #
-#    Updated: 2016/12/29 18:27:06 by fel-mazo         ###   ########.fr        #
+#    Created: 2016/12/29 18:41:03 by fel-mazo          #+#    #+#              #
+#    Updated: 2016/12/30 00:52:14 by fel-mazo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		= gcc
-NAME	= testmatrix
+NAME	= libmx.a
 CFLAGS	= -Wall -Wextra -Werror
-SRC		= creation.c util.c main.c ops.c
-LIB		= ./lib_subset
+SRC		= creation.c ops.c util.c
 
 OBJ		= $(SRC:.c=.o)
 
@@ -24,15 +23,13 @@ all : $(NAME)
 	$(CC) $(CFLAGS) -c -I . $^
 
 $(NAME) : $(OBJ)
-	make -C ./lib_subset
-	$(CC) $(CFLAGS) -L$(LIB) -lft -o $(NAME) $(OBJ)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean :
-	make -C ./lib_subset clean
 	rm -f $(OBJ)
 
 fclean : clean
-	make -C ./lib_subset fclean
 	rm -f $(NAME)
 
 re : fclean $(NAME)
